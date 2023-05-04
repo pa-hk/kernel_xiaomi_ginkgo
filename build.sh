@@ -4,7 +4,7 @@
 # Copyright (C) 2020-2021 Adithya R.
 
 SECONDS=0 # builtin bash timer
-ZIPNAME="QuicksilveRYong-ginkgo-$(date '+%Y%m%d-%H%M').zip"
+ZIPNAME="QuicksilveR-ginkgo-$(date '+%Y%m%d-%H%M').zip"
 TC_DIR="$(pwd)/tc/clang-r487747"
 AK3_DIR="$(pwd)/android/AnyKernel3"
 DEFCONFIG="vendor/ginkgo-perf_defconfig"
@@ -44,7 +44,7 @@ if [ -f "out/arch/arm64/boot/Image.gz-dtb" ] && [ -f "out/arch/arm64/boot/dtbo.i
 echo -e "\nKernel compiled succesfully! Zipping up...\n"
 if [ -d "$AK3_DIR" ]; then
 cp -r $AK3_DIR AnyKernel3
-elif ! git clone -q https://github.com/ghostrider-reborn/AnyKernel3; then
+elif ! git clone -q https://github.com/AfkYoung/AnyKernel3; then
 echo -e "\nAnyKernel3 repo not found locally and cloning failed! Aborting..."
 exit 1
 fi
